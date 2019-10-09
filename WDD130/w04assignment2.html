@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Applied Scripture</title>
+    <script>
+        function applyScripture() {
+            var name = document.getElementById('nameInputBox').value;
+            var scripture = "And, "+name+" turned back, and looked on them,"+
+            " and cursed them in the name of the Lord.  And there came forth"+ 
+            "two she bears out of the wood, and tare forty and two children of them.";
+            document.getElementById('outputDiv').innerHTML = scripture;
+        }
+    
+    </script>
 </head>
 <body>
-    
+    Please enter your name: <input type="text" id="nameInputBox">
+    <button type="button" onclick="applyScripture()">Verse</button>
+    <div id="outputDiv"></div>
 </body>
 </html>
