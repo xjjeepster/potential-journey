@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Defining Table Mileage</title>
+
+    <script>
+        /* Input: Begining mileage, ending mileage, and quantity of gasoline used
+        *  processing:
+        *    subtract begining mileage from ending mileage to get miles driven
+        *    divide miles driven by amount of gasoline
+        *  Output: MPG
+        */
+        function mileage() {
+            // Get the begining and ending miles.
+            var b=parseFloat(document.getElementById("beginingmilesInput").value);
+            var e=parseFloat(document.getElementById("endingmilesInput").value);
+            var g=parseFloat(document.getElementById("gallonsofgasInput").value);
+            // Compute conversion
+            var x=(e-b)/g
+
+            // Display MPG to user
+            document.getElementById('outputDiv').innerHTML = x;
+        }
+    </script>
 </head>
 <body>
-    
+    Input Quarts Here:<br> 
+    Begining Odometer Reading<input type="text" id="beginingmilesInput" size="5"><br>
+    Ending Odometer Reading<input type="text" id="endingmilesInput" size="5"><br>
+    Gallons of Gas Used<input type="text" id="gallonsofgasInput" size="5"><br>
+    <button type="button" onclick="mileage()">Calculate</button><br>
+    Mileage in miles per gallon (MPG):
+    <div id="outputDiv"></div>
 </body>
-</html>
+</html
