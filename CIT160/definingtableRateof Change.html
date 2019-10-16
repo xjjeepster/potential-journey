@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Rate of Change</title>
+<script>
+
+/* Input: Previous Price, Current Price
+        *  processing:
+        *   currPrice-prevPrice
+        *   divide by prevPrice
+        *  Output: rateOfChange
+        */
+        function mileage() {
+            // Get the Previous and Current Price.
+            var c = parseFloat(document.getElementById("currPrice").value);
+            var p = parseFloat(document.getElementById("prevPricet").value);
+                        // Compute conversion
+            var x = (c-p)/p;
+
+            // Display MPG to user
+            document.getElementById('rate').innerHTML = x;
+        }
+
+</script>
+</head>
+
+<body>
+    <h1>Rate of Change</h1>
+    Previous Price <input type="text" id="prevPrice"><br>
+    Current Price <input type="text" id="currPrice"><br>
+    <button type="button" onclick="computeRateOfChange()">Rate of Change</button><br>
+    Rate of Change <div id="rate"></div>
+</body>
+</html
