@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Defining Table Quarts to Liters</title>
+
+    <script>
+        /* Input: X = quarts
+        *  processing:
+        *    multiply X by .946353
+        *  Output: Liters
+        */
+        function conversion() {
+            // Get the quantity of quarts from user.
+            var q=parseFloat(document.getElementById("quartsInput").value);
+            var l=.946353
+            
+            // Compute conversion
+            var x=q*l
+
+            // Display conversion in liters to user
+            document.getElementById('outputDiv').innerHTML = x;
+        }
+    </script>
+</head>
+<body>
+    Quarts <input type="text" id="quartsInput" size="5"><br>
+    <button type="button" onclick="conversion()">Convert</button>
+    <div id="outputDiv"></div>
+</body>
+</html>
