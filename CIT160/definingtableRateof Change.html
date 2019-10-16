@@ -14,12 +14,12 @@
         function mileage() {
             // Get the Previous and Current Price.
             var c = parseFloat(document.getElementById("currPrice").value);
-            var p = parseFloat(document.getElementById("prevPricet").value);
+            var p = parseFloat(document.getElementById("prevPrice").value);
                         // Compute conversion
-            var x = (c-p)/p;
+            var RateOfChange = (c-p)/p;
 
-            // Display MPG to user
-            document.getElementById('rate').innerHTML = x;
+            // Display rate of change to user
+            document.getElementById("rate").innerHTML = RateOfChange;
         }
 
 </script>
