@@ -15,11 +15,11 @@
         */
         function mileage() {
             // Get the begining and ending miles.
-            var b=parseFloat(document.getElementById("beginingmilesInput").value);
-            var e=parseFloat(document.getElementById("endingmilesInput").value);
-            var g=parseFloat(document.getElementById("gallonsofgasInput").value);
+            var b = parseFloat(document.getElementById("beginingmilesInput").value);
+            var e = parseFloat(document.getElementById("endingmilesInput").value);
+            var g = parseFloat(document.getElementById("gallonsofgasInput").value);
             // Compute conversion
-            var x=(e-b)/g
+            var x = (e-b)/g;
 
             // Display MPG to user
             document.getElementById('outputDiv').innerHTML = x;
@@ -35,4 +35,4 @@
     Mileage in miles per gallon (MPG):
     <div id="outputDiv"></div>
 </body>
-</html
+</html>
