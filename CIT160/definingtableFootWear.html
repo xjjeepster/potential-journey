@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /* Input: Current Weather
+        *  processing:
+        *   hot=sandals rain=galoshes snow=boots all others=shoes
+        *  Output: Footwear
+        */
+        function footWear() {
+            // *Get the current weather.
+                        
+            var text = document.getElementById("Weather").value;         
+            var weather = text;
+
+            // Processing: Choose footwear
+            var Footwear;
+            if (weather == 'hot') {
+                Footwear = "sandals";
+            }
+            else if (weather == 'rain') {
+                Footwear = "galoshes";
+            }
+            else if (weather == 'snow') {
+                Footwear = "boots";
+            }
+            else {
+                Footwear = "shoes";
+            }
+            
+
+           // Output:Display Footwear
+            document.getElementById('output').innerHTML = Footwear;
+        }
+    </script>
+</head>
+<body>
+    <H3>Shoe type selector</H3>
+    Input Current Weather ie: hot, rain, snow, etc.<input type="text" id="Weather" size="5"><br>
+    <button type="button" onclick="footWear()">Choose Footwear</button><br>
+    You should wear: <div id='output'></div>
+</body>
+</html>
