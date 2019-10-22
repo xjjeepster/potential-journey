@@ -15,20 +15,34 @@
         function mathSkills() {
             // *Get the variables.
                         
-            var a=parseFloat(document.getElementById('1stVariable').value); 
-            var b=document.getElementById('operator').value;
-            var c=parseFloat(document.getElementByID('2ndVariable').value);
-            var d=parseFloat(document.getElementByID('answer').value);        
+            let a=parseInt(document.getElementById('1stVariable').value); 
+            let b=document.getElementById('operator').value;
+            let c=parseInt(document.getElementByID('2ndVariable').value);
+            let d=parseInt(document.getElementByID('answer').value);        
             
 
             // Processing: Choose message
-            var message;
-                if (abc == d) {
-                    message = "Correct! Good Job!";
-                }      
-                else {
-                    message = "Incorrect! Try again!";
-                }              
+                switch(operator){
+                    case '+':
+                        value = a + c;
+                        break;
+                    case '-':
+                        value = a - c;
+                        break;
+                    case '*':
+                        value = a * c;
+                        break;
+                    case '/':
+                        value = a / c;
+                        break;
+                }
+
+            if (value == 'answer') {
+                message = "Correct! Good Job!";
+            }      
+            else {
+                message = "Incorrect! Try again!";
+            }              
             
            // Output:Display Footwear
             document.getElementById('output').innerHTML = message;
