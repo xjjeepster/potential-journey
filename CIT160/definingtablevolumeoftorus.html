@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume of a Torus</title>
+<script>
+
+/* Input: Inner radius, Outer radius
+        *  processing:
+        *   currPrice-prevPrice
+        *   divide by prevPrice
+        *  Output: rateOfChange
+        */
+        function computeVolume() {
+            // Get the Previous and Current Price.
+            var a = parseFloat(document.getElementById("inner").value);
+            var b = parseFloat(document.getElementById("outer").value);
+                        // Compute conversion
+            var v = Math.pow(Math.PI,2)*(a+b)*Math.pow((a-b),2)/4;
+
+            // Display rate of change to user
+            document.getElementById("volume").innerHTML = v;
+        }
+
+</script>
+</head>
+
+<body>
+    <h1>Volume of a Torus</h1>
+    Inner radius <input type="text" id="inner"><br>
+    Outer radius <input type="text" id="outer"><br>
+    <button type="button" onclick="computeVolume()">Volume</button><br>
+    Volume <div id="volume"></div>
+</body>
+</html>
