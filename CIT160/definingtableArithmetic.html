@@ -16,10 +16,12 @@
             // *Get the variables.
                         
             let a=parseInt(document.getElementById('1stVariable').value); 
-            let b=document.getElementById('operator').value;
+            var b=document.getElementById('operator').value;
             let c=parseInt(document.getElementByID('2ndVariable').value);
             let d=parseInt(document.getElementByID('answer').value);        
             
+            let value;
+            let message;
 
             // Processing: Choose message
                 switch(operator){
@@ -43,10 +45,11 @@
                 else {
                     message = "Incorrect! Try again!";
                 }              
-            }   
+           
         
-         // Output:Display Footwear
-            document.getElementById('output').innerHTML = message;
+             // Output:Display Footwear
+                document.getElementById('output').innerHTML = message;
+        }
         
     </script>
 </head>
