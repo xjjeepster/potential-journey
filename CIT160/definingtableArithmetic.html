@@ -14,32 +14,31 @@
         */
         function mathSkills() {
             // *Get the variables.
-                        
-            let a=parseInt(document.getElementById('1stVariable').value); 
-            var b=document.getElementById('operator').value;
-            let c=parseInt(document.getElementByID('2ndVariable').value);
-            let d=parseInt(document.getElementByID('answer').value);        
-            
-            let value;
-            let message;
 
+            let value;
+            let message;                        
+            const firstnumber = parseInt(document.getElementById('1stVariable').value); 
+            const operator = document.getElementById('operator').value;
+            const secondnumber = parseInt(document.getElementByID('2ndVariable').value);
+            const results = parseInt(document.getElementByID('answer').value);        
+            
             // Processing: Choose message
-                switch(b){
+                switch(operator){
                     case '+':
-                        value = a + c;
+                        value = firstnumber + secondnumber;
                         break;
                     case '-':
-                        value = a - c;
+                        value = firstnumber - secondnumber;
                         break;
                     case '*':
-                        value = a * c;
+                        value = firstnumber * secondnumber;
                         break;
                     case '/':
-                        value = a / c;
+                        value = firstnumber / secondnumber;
                         break;
                 }
 
-                if (value === d) {
+                if (value === results) {
                     message = "Correct! Good Job!";
                 }      
                 else {
@@ -55,11 +54,11 @@
 </head>
 <body>
     <H1>Test Your Math Skills!</H1>
-    <input type="text" id="1stVariable" size="5">
-    <input type="text" id="operator" size="1">
-    <input type="text" id="2ndVariable" size="5">
+    <input type="text" id='1stVariable' size="5">
+    <input type="text" id='operator' size="1">
+    <input type="text" id='2ndVariable' size="5">
     =
-    <input type="text" id="answer" size="5"><br>
+    <input type="text" id='answer' size="5"><br>
     <button type="button" onclick="mathSkills()">Check</button><br>
     <div id='output'></div>
 </body>
