@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*Input: Total ammount of sale
+         *Processing: If total sale is more than $50 and it is a tuesday or wednesday than subtract 10%
+         *compute 6% tax rate and add onto total price
+         *Output: Total after any applicable discounts
+         */
+
+        function calculateDiscount() {
+            var ammount = parseFloat(document.getElementById("subtotal").value);
+            var dayOfWeek = new Date().getDay();
+
+            var discount;
+
+            if (dayOfWeek == 2 && ammount > 50) {
+                discount = ammount * .10;
+            } else if (dayOfWeek == 4 && ammount > 50) {
+                discount = ammount * .10;
+            } else {
+                discount = 0;
+            }
+
+            var totalafterdiscount = ammount - discount;
+            var tax = totalafterdiscount * .06;
+
+            var total = totalafterdiscount + tax;
+            var total1 = total.toFixed(2);
+
+            document.getElementById('output').innerHTML = total1;
+        }
+    </script>
+
+</head>
+
+<body>
+    Enter ammount of Sale: <input type="text" id="subtotal" size='5'><br> Sales tax = 6%<br>
+    <button type="button" onclick="calculateDiscount()">Total</button>
+    <div id='output'></div>
+
+</body>
+
+</html>
