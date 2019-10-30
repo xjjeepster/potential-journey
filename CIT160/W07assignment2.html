@@ -13,7 +13,7 @@
          *Output: GetUp! or SleepIn!
          */
 
-        function checkcalendar() {
+        function check() {
             var now = new Date();
             var month = now.getMonth();
             var dayofMonth = now.getDate();
@@ -22,14 +22,14 @@
             var result;
             if (dayOfWeek == 6 || 0 == dayOfWeek) {
                 result = 'Sleep In.';
-            } else if (month = 0 && dayofMonth = 1) {
+            } else if (month == 0 && dayofMonth == 1) {
                 result = 'Sleep In.';
-            } else if (month = 6 && dayofMonth = 4) {
+            } else if (month == 6 && dayofMonth == 4) {
                 result = 'Sleep In.';
-            } else if (month = 11 && dayofMonth = 25) {
+            } else if (month == 11 && dayofMonth == 25) {
                 result = 'Sleep In.';
             } else {
-                result = 'Get Up!'
+                result = 'Get Up!';
             }
             document.getElementById('output').innerHTML = result;
         }
@@ -38,7 +38,7 @@
 
 <body>
     Can I Sleep In Today?<br>
-    <button type="button" onclick="checkcalendar()">CHECK!</button>
+    <button type="button" onclick="check()">CHECK!</button>
     <div id='output'></div>
 
 
