@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /* Input: All variables come from computer clock
+         *variables needed: now, month, day of month, day of week
+         *Process: check if weekend or holliday
+         *Output: GetUp! or SleepIn!
+         */
+
+        function checkcalendar() {
+            var now = new Date();
+            var month = now.getMonth();
+            var dayofMonth = now.getDate();
+            var dayOfWeek = now.getDay();
+
+            var result;
+            if (dayOfWeek == 6 || 0 == dayOfWeek) {
+                result = 'Sleep In.';
+            } else if (month = 0 && dayofMonth = 1) {
+                result = 'Sleep In.';
+            } else if (month = 6 && dayofMonth = 4) {
+                result = 'Sleep In.';
+            } else if (month = 11 && dayofMonth = 25) {
+                result = 'Sleep In.';
+            } else {
+                result = 'Get Up!'
+            }
+            document.getElementById('output').innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+    Can I Sleep In Today?<br>
+    <button type="button" onclick="checkcalendar()">CHECK!</button>
+    <div id='output'></div>
+
+
+</body>
+
+</html>
