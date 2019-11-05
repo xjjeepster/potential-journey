@@ -13,23 +13,20 @@
          *              program would add all odd intigers between 1 & (n)
          *Output: Sum of the variables
          */
-        function clickAlert2() {
-            var userNum = document.getElementById("userEnterNum").value;
-            var userNum = parseInt(userNum); // this will parse the string to a number
-            for (var i = 1; i <= userNum; i++) {
-                if (i % 2 == 1) {
-                    document.getElementById("evenOddList").innerHTML += i + "<br>";
-                }
-            }
+        function addOddNumbers() {
+            const userNum = document.getElementById("userEnterNum").value;
+            let sum = 0;
+            for (let i = 1; i <= userNum; i += 2) sum += i;
+            document.getElementById("output").innerHTML = sum;
         }
     </script>
 </head>
 
 <body>
     <input type="text" id="userEnterNum">
-    <button type="button" onclick="clickAlert2()">Test
+    <button type="button" onclick="addOddNumbers()">Test
         </button>
-    <div id="evenOddList"></div>
+    <div id="output"></div>
 
 </body>
 
