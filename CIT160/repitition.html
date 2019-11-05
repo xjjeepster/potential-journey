@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Repitition Assignment</title>
+    <script>
+        /*input: User enters and intiger (n)
+         *processing:   program would determin if input is odd or even, if even add 1 to get odd number
+         *              program would get all odd intigers between 1 & (n)
+         *              program would add all odd intigers between 1 & (n)
+         *Output: Sum of the variables
+         */
+        function clickAlert2() {
+            var userNum = document.getElementById("userEnterNum").value;
+            var userNum = parseInt(userNum); // this will parse the string to a number
+            for (var i = 1; i <= userNum; i++) {
+                if (i % 2 == 1) {
+                    document.getElementById("evenOddList").innerHTML += i + "<br>";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="userEnterNum">
+    <button type="button" onclick="clickAlert2()">Test
+        </button>
+    <div id="evenOddList"></div>
+
+</body>
+
+</html>
