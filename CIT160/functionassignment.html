@@ -9,12 +9,12 @@
 
     <script>
         function doInputOutput() {
-            var tempF = parseInt(document.getElementById("Temperature").value);
-            var speed = parseInt(document.getElementById("WindSpeed").value);
+            var tempF = parseFloat(document.getElementById("Temperature").value);
+            var speed = parseFloat(document.getElementById("WindSpeed").value);
 
-            windchill(tempF, speed);
+            let f = windchill(tempF, speed);
 
-            document.getElementById('outputDiv').innerHTML = f;
+            document.getElementById('outputDiv').innerHTML = f.toFixed(2) + " degrees";
         }
 
         function windchill(tempF, speed) {
