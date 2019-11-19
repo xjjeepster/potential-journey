@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Week 10 Function Assignment</title>
+
+    <script>
+        function doInputOutput() {
+            var tempF = parseInt(document.getElementById("Temperature").value);
+            var speed = parseInt(document.getElementById("WindSpeed").value);
+
+            windchill(tempF, speed);
+
+            document.getElementById('outputDiv').innerHTML = f;
+        }
+
+        function windchill(tempF, speed) {
+
+            var x = Math.pow(speed, 0.16);
+            var f = 35.74 + (0.6215 * tempF) - (35.75 * x) + (0.4275 * tempF * x);
+            return f;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    Calculate Wind Chill:<br> Temperature:
+    <input type="text" id="Temperature" size="5"><br> Wind Speed:<input type="text" id="WindSpeed" size="5"><br>
+    <button type="button" onclick="doInputOutput()">WindChill</button><br>
+    <br>
+    <div id="outputDiv"></div>
+
+</body>
+
+</html>

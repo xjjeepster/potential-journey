@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Display 5X tables</title>
+    <script>
+        function display() {
+            var text = "";
+            var i = 1;
+            while (i <= 12) {
+                text += "<br>5 X " + i + "=" + 5 * i;
+                i++;
+            }
+            document.getElementById("output").innerHTML = text;
+        }
+    </script>
 
 </head>
 
 <body>
-    <h2>5X Tables</h2>
+    <h2>5X Tables</h2><br>
 
-    <p id="display"></p>
-
-    <script>
-        var text = "";
-        var i = 1;
-        while (i <= 12) {
-            text += "<br>5 X " + i + "=" + 5 * i;
-            i++;
-        }
-        document.getElementById("display").innerHTML = text;
-    </script>
+    <button type="button" onclick="display()">Display
+    </button>
+    <div id="output"></div>
 </body>
 
 </html>

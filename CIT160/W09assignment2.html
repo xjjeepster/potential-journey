@@ -7,22 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Powers of 2</title>
 
+    <script>
+        function display() {
+            var text = "";
+            var i = 0;
+            while (i <= 31) {
+                text += Math.pow(2, i) + ", ";
+                i++;
+            }
+            document.getElementById("output").innerHTML = text;
+        }
+    </script>
+
 </head>
 
 <body>
     <h2>The powers of 2 from 0 to 31</h2>
 
-    <p id="display"></p>
 
-    <script>
-        var text = "";
-        var i = 0;
-        while (i <= 31) {
-            text += Math.pow(2, i) + ", ";
-            i++;
-        }
-        document.getElementById("display").innerHTML = text;
-    </script>
+    <button type="button" onclick="display()">Display
+    </button>
+    <div id="output"></div>
 </body>
 
 </html>

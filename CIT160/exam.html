@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <script>
+        /* Input: get two numbers from user
+         * Processing: check to see if both numbers are greater than 5 or if the sum is greater than 20
+         * Output: if one is true then output is true otherwise output is false
+         */
+
+        function fives() {
+            var x = parseInt(document.getElementById("one").value);
+            var y = parseInt(document.getElementById("two").value);
+
+            if ((x > 5 && y > 5) ^ (x + y > 20)) {
+                TorF = "True";
+            } else {
+                TorF = "False";
+            }
+
+            document.getElementById("output").innerHTML = TorF;
+        }
+    </script>
+</head>
+
+<body>
+    Please enter two numbers:
+    <input type="text" id="one" size="5">
+    <input type="text" id="two" size="5">
+    <button type="button" onclick="fives()">Click</button>
+    <div id="output"></div>
+</body>
+
+</html>
