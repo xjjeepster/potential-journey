@@ -40,9 +40,10 @@
 
         function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
 
-            pVal = document.getElementById('output1').value;
+            P = computePayment(principal, annualRate, years, periodsPerYear).toFixed(2);
+            rate = annualRate / periodsPerYear;
 
-            b = principal * Math.pow((1 + (annualRate / periodsPerYear)), numberOfPaymentsPaidToDate) - (pVal * ((Math.pow(1 + annualRate / periodsPerYear), numberOfPaymentsPaidToDate) - 1)) / (annualRate / periodsPerYear);
+            b = principal * Math.pow((1 + rate), numberOfPaymentsPaidToDate) - P * (Math.pow((1 + rate), numberOfPaymentsPaidToDate) - 1) / rate;
 
             return b;
         }
