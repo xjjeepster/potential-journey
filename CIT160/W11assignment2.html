@@ -9,7 +9,15 @@
 </head>
 
 <body>
-
+    <h2>Loan Calculator</h2>
+    <p>Amount borrowed (principal) <input type="text" id="principal" size="5"></p>
+    <p>Annual interest rate (example: .065) <input type="text" id="rate" size="5"></p>
+    <p>Number of years <input type="text" id="years" size="5"></p>
+    <p>Payments per year <input type="text" id="ppy" size="5"></p>
+    <button type="button" onclick="doPayment()">Compute Payments</button>
+    <div id="output1" <p>Number of payments paid to date <input type="text" id="pptd" size="5"></p>
+        <button type="button" onclick="doBalance()">Compute payoff amount</button>
+        <div id="output2"></div>
 </body>
 
 </html>

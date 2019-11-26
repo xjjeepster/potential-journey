@@ -7,6 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
+        function doFV() {
+            aVal = document.getElementById('principal').value;
+            rVal = document.getElementById('rate').value;
+            nVal = document.getElementById('years').value;
+            pVal = document.getElementById('periods').value;
+
+            fv = computeFutureValue(aVal, rVal, nVal, pVal);
+
+            document.getElementById("output").innerHTML = "$" + fv.toFixed(2);
+        }
+
+        function computeFutureValue(principal, annualRate, years, periodsPerYear) {
+            f = principal * Math.pow((1 + annualRate / periodsPerYear), (years * periodsPerYear));
+            return f;
+        }
     </script>
 </head>
 
