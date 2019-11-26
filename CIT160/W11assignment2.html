@@ -5,7 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Loan Calculator</title>
+    <script>
+        function doPayment() {
+            aVal = document.getElementById('principal').value;
+            rVal = document.getElementById('rate').value;
+            nVal = document.getElementById('years').value;
+            ppyVal = document.getElementById('ppy').value;
+
+            payment = computePayment(aVal, rVal, nVal, ppyVal);
+
+            document.getElementById("output1").innerHTML = "$" + payment.toFixed(2);
+        }
+
+        function doBalance() {
+            aVal = document.getElementById('principal').value;
+            rVal = document.getElementById('rate').value;
+            nVal = document.getElementById('years').value;
+            ppyVal = document.getElementById('ppy').value;
+            dVal = document.getElementById('pptd').value;
+
+            payoff = computeBalance(aVal, rVal, nVal, ppyVal, dVal);
+
+            document.getElementById("output2").innerHTML = "$" + payoff.toFixed(2);
+        }
+
+        function computePayment(principal, annualRate, years, periodsPerYear) {
+
+            P = principal * (annualRate / periodsPerYear) / (1 - Math.pow((1 + annualRate / periodsPerYear), -years * periodsPerYear));
+
+            return P;
+
+        }
+
+        function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
+
+            pVal = document.getElementById('output1').value;
+
+            b = principal * Math.pow((1 + (annualRate / periodsPerYear)), numberOfPaymentsPaidToDate) - (pVal * ((Math.pow(1 + annualRate / periodsPerYear), numberOfPaymentsPaidToDate) - 1)) / (annualRate / periodsPerYear);
+
+            return b;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -14,10 +56,14 @@
     <p>Annual interest rate (example: .065) <input type="text" id="rate" size="5"></p>
     <p>Number of years <input type="text" id="years" size="5"></p>
     <p>Payments per year <input type="text" id="ppy" size="5"></p>
+
     <button type="button" onclick="doPayment()">Compute Payments</button>
-    <div id="output1" <p>Number of payments paid to date <input type="text" id="pptd" size="5"></p>
-        <button type="button" onclick="doBalance()">Compute payoff amount</button>
-        <div id="output2"></div>
+    <div id="output1"></div>
+
+    <p>Number of payments paid to date <input type="text" id="pptd" size="5"></p>
+
+    <button type="button" onclick="doBalance()">Compute payoff amount</button>
+    <div id="output2"></div>
 </body>
 
 </html>
