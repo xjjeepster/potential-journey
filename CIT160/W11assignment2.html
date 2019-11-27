@@ -32,7 +32,7 @@
 
         function computePayment(principal, annualRate, years, periodsPerYear) {
 
-            P = principal * (annualRate / periodsPerYear) / (1 - Math.pow((1 + annualRate / periodsPerYear), -years * periodsPerYear));
+            var P = principal * (annualRate / periodsPerYear) / (1 - Math.pow((1 + annualRate / periodsPerYear), -years * periodsPerYear));
 
             return P;
 
@@ -40,8 +40,8 @@
 
         function computeBalance(principal, annualRate, years, periodsPerYear, numberOfPaymentsPaidToDate) {
 
-            P = computePayment(principal, annualRate, years, periodsPerYear).toFixed(2);
-            rate = annualRate / periodsPerYear;
+            var P = computePayment(principal, annualRate, years, periodsPerYear).toFixed(2);
+            var rate = annualRate / periodsPerYear;
 
             b = principal * Math.pow((1 + rate), numberOfPaymentsPaidToDate) - P * (Math.pow((1 + rate), numberOfPaymentsPaidToDate) - 1) / rate;
 

@@ -19,7 +19,7 @@
         }
 
         function computeFutureValue(principal, annualRate, years, periodsPerYear) {
-            f = principal * Math.pow((1 + annualRate / periodsPerYear), (years * periodsPerYear));
+            var f = principal * Math.pow((1 + annualRate / periodsPerYear), (years * periodsPerYear));
             return f;
         }
     </script>
