@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        var list = [12, 4, 8, 15, 17, 5, 20, 11];
+        var value = getMiddle(list);
+
+        function getMiddle(list) {
+            if (list.length % 2 == 1) {
+                return list[math.floor(list.length / 2)];
+            } else {
+                return (list[list.length / 2 - 1] + list[list.length / 2]) / 2;
+            }
+        }
+
+        document.getElementById('output').value = value;
+    </script>
+</head>
+
+<body>
+
+    <button type="button" onclick="getMiddle()">Results</button>
+    <div id="output"></div>
+
+</body>
+
+</html>
