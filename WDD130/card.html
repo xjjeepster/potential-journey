@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Card</title>
+
+    <style>
+        img {
+            max-with: 100%;
+        }
+        
+        .card {
+            width: 320px;
+            box-shadow: 1px 1px 4px 1px #888;
+            border-radius: 3px;
+            background-color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #888;
+            overflow: hidden;
+        }
+        
+        p {
+            margin: 1.5em;
+        }
+        
+        footer {
+            margin: 1em;
+        }
+        
+        .viewButton {
+            border-radius: 4px 0px 0px 4px;
+            color: #888;
+            background-color: white;
+            border: 1px solid #888;
+            padding: 5px 5px;
+            float: left;
+            border-right: none;
+        }
+        
+        .editButton {
+            border-radius: 0px 4px 4px 0px;
+            color: #888;
+            background-color: white;
+            border: 1px solid #888;
+            padding: 5px 5px;
+        }
+        
+        .time {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="card">
+        <img src="https://picsum.photos/320/240" alt="Thumbnail">
+        <p>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <footer>
+            <button class="viewButton" type="button">View</button>
+            <button class="editButton" type="button">Edit</button>
+            <span class=time>9 mins</span>
+        </footer>
+    </article>
+
+</body>
+
+</html>
