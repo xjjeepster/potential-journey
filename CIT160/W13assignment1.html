@@ -9,15 +9,15 @@
 
     <script>
         var list = [17, 8, 9, 5, 20]
-        var counter = new Array();
 
         function countEvens(list) {
+            let counter = 0;
             for (var i = 0; i < list.length; i++) {
-                if (i % 2 = 0) {
-                    counter.push(1);
+                if (i % 2 == 0) {
+                    counter += 1;
                 }
             }
-
+            return counter;
         }
     </script>
 </head>
