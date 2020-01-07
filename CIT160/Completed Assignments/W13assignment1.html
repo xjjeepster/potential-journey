@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Multiply Array</title>
+    <title>Counting Array</title>
 
     <script>
         var list = [17, 8, 9, 5, 20];
-        var multiplier = 3;
 
-        function multiply(list, multiplier) {
-            for (var i = 0; i < )
-
+        function countEvens(list) {
+            var counter = 0;
+            for (var i = 0; i < list.length; i++) {
+                if (list[i] % 2 == 0) {
+                    counter = counter + 1;
+                }
+            }
+            return counter;
         }
     </script>
-
 </head>
 
 <body>
